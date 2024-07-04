@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - De Burguer</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/compra.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="assets/hamburguer-shop-logo.png" alt="LOGO" id="Logo">
+            <h1 class="titulo"><span class="white">O MELHOR DA </span><span class="texto-mostarda">CIDADE</span></h1>
+            <button class="menu-toggle" aria-label="Menu Toggle">☰</button>
+            <ul class="menu"> 
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="./Hamburger.html">CARDÁPIO</a></li>
+                <li><a href="./bebidas.html">BEBIDAS</a></li>
+                <li><a href="./Sobre.html">SOBRE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="compra-container">
+            <h2>Detalhes da Compra</h2>
+            <div id="produto-info">
+               
+            </div>
+            <h1 id="Bebida-inclusa">*Nossos lanches vêm acompanhados com a BATATA e BEBIDA inclusa.<br>Por gentileza, solicite o sabor na descrição*</h1>
+            <form id="compra-form">
+                <h3>Informações do Cliente</h3>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="bebida">Escolha a bebida:</label>
+                <select id="bebida" name="bebida">
+                    <option value="Numero1">Js Java Juice - Uma bebida refrescante para acompanhar seu lanche.</option>
+                    <option value="Numero2">Ruby Refresher - Opção saudável e saborosa para complementar sua refeição.</option>
+                    <option value="Numero3">C Sharp Citrus - Para quem prefere uma opção leve e sem calorias extras.</option>
+                    <option value="Numero4">Python Punch- Ideal para quem busca uma bebida natural e revigorante.</option>
+                </select>
+                
+                <button id="mostarda" type="submit">Finalizar Compra</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/hamburguer-shop-logo.png" alt="Logo da Empresa">
+            </div>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:wsmanoel002@gmail.com">wsmanoel002@gmail.com</a></p>
+                <p>Telefone: <a href="tel:+5527988623059">+55 27 98862-3059</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DEVBURGUER. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

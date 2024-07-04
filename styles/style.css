@@ -1,0 +1,475 @@
+/* Definição das variáveis de cor */
+:root {
+    --gray: #e5e5e5;
+    --primary: #f8af35;
+}
+
+/* Reset de estilos padrão */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Estilos personalizados */
+.texto-mostarda {
+    color: var(--primary);
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para os grids de cardápio */
+#cardapio_lanche,
+#cardapio_bebida {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Reduzido para 30px para compactar os itens */
+    padding: 5%;
+}
+
+/* Estilos compartilhados para lanche e bebida */
+.lanche,
+.bebida {
+    margin-top: -30px; /* Reduzido para 30px para compensar o espaçamento */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; /* Para garantir que as imagens não ultrapassem os limites */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para as imagens de lanche e bebida */
+.lanche img,
+.bebida img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para as informações de lanche e bebida */
+.lanche-info,
+.bebida-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* Arredondamento apenas na parte inferior */
+    text-align: center;
+    opacity: 0;
+    visibility: hidden; /* Inicialmente invisível */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Delay para ocultar */
+}
+
+/* Estilos para o título dentro das informações de lanche e bebida */
+.lanche-info h2,
+.bebida-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Estilos para o texto dentro das informações de lanche e bebida */
+.lanche-info p,
+.bebida-info p {
+    margin: 5px 0 0;
+    font-size: 1em;
+}
+
+/* Estilos para o logo */
+#Logo {
+    margin-left: 35px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #000000;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Estilos para o título */
+.titulo {
+    margin-right: 650px;
+}
+
+/* Estilos para o menu */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* Estilos para os itens do menu */
+.menu li {
+    margin-right: 25px;
+    color: white;
+}
+
+/* Estilos para links */
+a {
+    color: aliceblue;
+}
+
+/* Estilos para link "Branco" no hover */
+#Branco:hover {
+    color: #fff;
+}
+
+/* Estilos para links no hover */
+a:hover {
+    color: var(--primary);
+}
+
+/* Estilos para botões */
+button {
+    background-color: var(--primary);
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Estilos para botões no hover */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para o container */
+.container {
+    display: flex;
+    background: #000000;
+}
+
+/* Estilos para o container de imagem */
+.imagem-container {
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 0;
+    position: relative; 
+    overflow: hidden; 
+    height: auto; 
+    min-height: 200px;
+}
+
+/* Estilos para o container de texto */
+.text-container {
+    width: 50%;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 150px;
+}
+
+/* Estilos para botão dentro do container de texto */
+.text-container button {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Estilos para texto branco */
+.white {
+    color: white;
+}
+
+/* Estilos para o menu de alternância */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para a área interna */
+.dentro {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Estilos para o botão b1 */
+#b1 {
+    width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    padding: 17px;
+    border-radius: 40px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para o container do rodapé */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para a logo do rodapé */
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o contato do rodapé */
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Estilos para o link de contato do rodapé */
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para o link de contato do rodapé no hover */
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o fundo do rodapé */
+.footer-bottom {
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/* Estilos para o texto do fundo do rodapé */
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilos para o container de iframe */
+.iframe-container {
+    width: 100%;
+    aspect-ratio: 50/9;
+}
+
+/* Estilos para a página de compra */
+.compra-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#produto-info {
+    margin-bottom: 20px;
+}
+
+#compra-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#compra-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#compra-form button {
+    width: 100%;
+    padding: 10px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#compra-form button:hover {
+    background: var(--primary);
+}
+
+/* Estilos para o espaço */
+#espaco {
+    background-color: #e5e5e5;
+    width: 100%;
+    height: 1px;
+    margin-left: 0px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mostrar menu quando .active é adicionada */
+.menu.active {
+    display: flex;
+}
+
+/* Estilo do botão de menu */
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#Bebida-inclusa {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 12px;
+    margin: 30px;
+    color: red;
+}
+
+#bebida {
+    margin: 10px;
+    padding: 5px;
+}
+#mostarda:hover {
+    color: #68645e;
+}
+/* Media queries para telas menores que 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #cardapio_lanche,
+    #cardapio_bebida {
+        grid-template-columns: 1fr;
+        gap: 20px; /* Reduzir o espaçamento */
+    }
+
+    .lanche-info h2,
+    .bebida-info h2 {
+        font-size: 16px;
+    }
+
+    .lanche-info p,
+    .bebida-info p {
+        font-size: 14px;
+    }
+}
+
+/* Media queries para telas menores que 480px */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .imagem-container {
+        width: 100%;
+    }
+
+    .menu {
+        align-items: center;
+    }
+
+    #cardapio_lanche,
+    #cardapio_bebida {
+        grid-template-columns: 1fr;
+        gap: 10px; /* Reduzir o espaçamento */
+    }
+
+    .lanche-info h2,
+    .bebida-info h2 {
+        font-size: 14px;
+    }
+
+    .lanche-info p,
+    .bebida-info p {
+        font-size: 12px;
+    }
+}
+
+/* Estilos para o hover clicável */
+.lanche:hover .lanche-info,
+.bebida:hover .bebida-info,
+.lanche.open .lanche-info,
+.bebida.open .bebida-info {
+    opacity: 1;
+    visibility: visible; /* Torna visível ao clicar */
+    transition: opacity 0.3s ease, visibility 0s linear; /* Remove o delay */
+}
+
+/* Estilos para o hover do item */
+.lanche:hover,
+.bebida:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente ao passar o mouse */
+    z-index: 1; /* Coloca sobreposto aos demais */
+    cursor: pointer; /* Altera para cursor de apontar */
+}
+
+/* Media query para telas maiores ou iguais a 769px */
+@media (min-width: 769px) {
+    .imagem-container {
+        display: block; /* Exibe o .imagem-container em telas maiores ou iguais a 769px */
+    }
+}
+@media(min-width: 768px) {
+    /* Mostrar menu em telas maiores */
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
